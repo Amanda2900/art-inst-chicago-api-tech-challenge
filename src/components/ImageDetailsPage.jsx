@@ -3,7 +3,7 @@ import './ImageDetailsPage.css';
 export function ImageDetailsPage({ artwork, backButtonHandler }) {
 	return (
 		<div className="image-details">
-			<button className="back-button" type="button" onClick={backButtonHandler}>
+			<button type="button" onClick={backButtonHandler}>
 				Back
 			</button>
 			<h2>{artwork.title}</h2>
