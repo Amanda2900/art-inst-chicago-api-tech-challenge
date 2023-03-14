@@ -49,7 +49,7 @@ export function App() {
 									>
 										<span>{item.title}</span>
 									</button>{' '}
-									By: {item.artist_title}
+									{item.artist_title}
 								</li>
 							);
 						})}
