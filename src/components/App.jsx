@@ -42,8 +42,12 @@ export function App() {
 						{data.map((item) => {
 							return (
 								<li key={item.id}>
-									<button type="button" onClick={() => clickHandler(item)}>
-										{item.title}
+									<button
+										className="button-link"
+										type="button"
+										onClick={() => clickHandler(item)}
+									>
+										<span>{item.title}</span>
 									</button>{' '}
 									By: {item.artist_title}
 								</li>
