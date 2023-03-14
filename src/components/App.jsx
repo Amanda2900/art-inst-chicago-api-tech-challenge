@@ -2,6 +2,7 @@ import './App.css';
 
 import { searchArtworks } from '../utils/api';
 import { SearchForm } from './SearchForm';
+import { ImageList } from './ImageList';
 import { ImageDetailsPage } from './ImageDetailsPage';
 import { Footer } from './Footer';
 import { useState } from 'react';
@@ -33,22 +34,7 @@ export function App() {
 			{!artworkSelected ? (
 				<div>
 					<SearchForm onSearchSubmit={onSearchSubmit} />
-					<ul>
-						{data.map((item) => {
-							return (
-								<li key={item.id}>
-									<button
-										className="button-link"
-										type="button"
-										onClick={() => clickHandler(item)}
-									>
-										<span>{item.title}</span>
-									</button>{' '}
-									{item.artist_title}
-								</li>
-							);
-						})}
-					</ul>
+					<ImageList clickHandler={clickHandler} data={data} />
 				</div>
 			) : (
 				<ImageDetailsPage
